@@ -1,0 +1,30 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.edit-form{
+  border: solid 1px #333;
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+}
+
+.field{
+  display: inline-block;
+}
+
+.actions{
+  display: inline-block;
+}
+
+.list-items{
+  margin: 10px;
+  .description{
+    width: 300px;
+    display: inline-block;
+  }
+  .image{
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+  }
+}

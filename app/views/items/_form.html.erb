@@ -1,0 +1,8 @@
+<div class="field">
+  <input type="text" class="form-control" placeholder="Название" autofocus ng-model="item.newName">
+  <input type="file" onchange="angular.element(this).scope().selectFile(this.files, angular.element(this).scope().item)" />
+</div>
+<div class="actions">
+  <button ng-click="saveItem(item||{newName: ''})">Схранить</button>
+</div>
+

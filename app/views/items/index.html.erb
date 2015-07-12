@@ -1,0 +1,22 @@
+<div ng-app="itemsApp" >
+  <div ng-controller="itemsController" ng-init='items=<%=raw render(:template => "items/index.json")%>'>
+  <h1>Items</h1>
+  <div class="edit-form">
+    <%= render 'form' %>
+  </div>
+  <div class="list-items" ng-repeat="item in items | orderBy:'created_at' track by $index">
+    <div class="item">
+      <div class="description">      
+        <span>{{$index+1}}.</span>
+        <span>{{item.name}}</span>
+      </div>
+      <img class="image" ng-src="{{item.image||'/images/default.jpg'}}"/>
+      <button ng-click="editItem(item)">Редактировать</button>
+      <button ng-click="removeItem(item)">Удалить</button>
+      <div class="edit-form" ng-show="item.isEdit">
+        <%= render 'form' %>
+        <button ng-click="cancel(item)">Отмена</button>
+      </div>
+    </div>
+  </div>
+</div>
