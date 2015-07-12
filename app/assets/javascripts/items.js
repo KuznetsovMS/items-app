@@ -49,7 +49,6 @@ itemsApp.controller('itemsController', ['$scope', 'Upload', function($scope, Upl
       type = 'PUT';
       url = '/items/' + item.id
     }
-    console.log('item');console.log(item);
     $scope.upload = Upload.upload({
       url: url + '.json',
       method: type,

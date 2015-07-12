@@ -25,13 +25,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    p "===params="
-    p params
-    p "===item_params=="
-    p item_params
     @item = Item.new(item_params)
-    # p "========="
-    # p @item
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
